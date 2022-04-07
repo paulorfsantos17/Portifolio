@@ -1,0 +1,15 @@
+const getNumeroAleatorio = function(min, max){
+    const valor = Math.random() * (max - min) + min
+    return Math.floor(valor)
+} 
+
+
+let opcao  =0
+
+do {
+   opcao  =  getNumeroAleatorio(-1 , 10)
+    console.log(`Numero escolhido é ${opcao}`)
+
+} while (opcao != -1)
+
+console.log('Fim da Operação!')
