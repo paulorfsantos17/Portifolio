@@ -14,3 +14,4 @@ function compras(trabalho1 , trabalho2){
 }
 
 console.log(compras(true , false))
+
