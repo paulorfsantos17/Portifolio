@@ -1,0 +1,16 @@
+{
+  "name": "funcionarios",
+  "version": "1.0.0",
+  "description": "Projeto node",
+  "main": "funcionarios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon",
+    "dev" : "nodemon"
+  },
+  "author": "Paulo",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "0.17.1"
+  }
+}
