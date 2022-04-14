@@ -16,11 +16,11 @@
             xhr.open(config.metodo, config.url, true)
 
             xhr.onload = e => {
-                if(xhr.status === '200') {
+                if(xhr.status === 200) {
                     config.sucesso(xhr.response)
-                } else if (xhr.status>= 400) {
-                    config.error({
-                       code : xhr.status(),
+                } else if (xhr.status >= 400) {
+                    config.erro({
+                       code : xhr.status,
                        text : xhr.statusText
 
                     })
@@ -38,35 +38,35 @@
 
                 
                     const tdNome = document.createElement('td')
-                    tdId.innerHTML = estado.nome
+                    tdNome.innerHTML = estado.nome
 
                 
                    
                     const tdSigla = document.createElement('td')
-                    tdId.innerHTML = estado.sigla
+                    tdSigla.innerHTML = estado.sigla
 
-                    const tr = document.createElement('td')
+                    const tr = document.createElement('tr')
 
                     tr.appendChild(tdId)
-                    tr.appendChild(tdId)
-                    tr.appendChild(tdId)
+                    tr.appendChild(tdNome)
+                    tr.appendChild(tdSigla)
 
                     return tr
                 })
 
                 const table = document.createElement('table')
-                linhas.foreach(linha => linha.appendChild(table))
+                linhas.forEach(linha => table.appendChild(linha))
                 document.body.appendChild(table)
         }
 
         ajax({
             url: 'dados/estados.json',
-            metodo : "GET",
+            metodo : "get",
             sucesso(resposta) {
                 const estados = JSON.parse(resposta)
                 criaTabela(estados)
 
-            },error(e) {
+            },erro(e) {
                 const msg = document.createTextNode(`${e.code}: ${e.text}`)
                 document.body.appendChild(msg)
             }
