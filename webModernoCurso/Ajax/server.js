@@ -16,5 +16,17 @@ const storage = multer.diskStorage({
     }
 })
 
+const upload = multer({storage}).single('arquivo')
+
+app.post('/upload', (req, res) => {
+    upload(req, res, err => {
+        if(err) {
+            return res.end("Ocorreu um Erro")
+        }
+
+        res.end('concluido com sucesso')
+    })
+})
+
 app.get('/teste', (req, res) => res.send('ok'))
 app.listen(8080,() => console.log('Executando'))
