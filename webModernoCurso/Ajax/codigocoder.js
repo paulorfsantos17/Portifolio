@@ -1,37 +1,28 @@
-function ajax(config) {
-    const xhr = new XMLHttpRequest()
-    xhr.open(config.metodo, config.url, true)
-
-    xhr.onreadystatechange = e => {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                config.sucesso(xhr.responseXML)
-            } else if (xhr.status >= 400) {
-                config.erro({
-                    codigo: xhr.status,
-                    texto: xhr.statusText
-                })
+function navegarViaAjax(url, seletor, push = true) {
+    if(!url || !seletor) return
+    const elemento = document.querySelector(seletor)
+    fetch(url)
+        .then(resp => resp.text())
+        .then(html => {
+            elemento.innerHTML = html
+            if(push) {
+                history.pushState({ seletor }, "Página Ajax", url)
             }
-        }
-    }
-
-    xhr.send()
+        })
 }
 
-ajax({
+document.querySelectorAll('[wm-link]').forEach(link => {
+    const url = link.attributes['wm-link'].value
+    const seletorDestino = link.attributes['wm-destino'].value
 
-    metodo: "get",
-    url: "dados/estados.xml",
-    sucesso(resposta) {
-        console.log(resposta)
-        const estados = resposta.getElementsByTagName('estado')
-        const itens = Array.from(estados).reduce(
-            (html, estado) => html + `<li>${estado.attributes.nome.value}</li>`, ''
-        )
-        document.body.insertAdjacentHTML('beforeend', `<ul>${itens}</ul>`)
-    },
-    erro(e) {
-        const msg = document.createTextNode(`${e.codigo}: ${e.texto}`)
-        document.body.appendChild(msg)
+    link.onclick = e => {
+        e.preventDefault()
+        navegarViaAjax(url, seletorDestino)
     }
 })
+
+window.onpopstate = e => {
+    if(e.state) {
+        navegarViaAjax(window.location.href, e.state.seletor, false)
+    }
+}
