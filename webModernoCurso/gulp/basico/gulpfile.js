@@ -25,5 +25,5 @@ const fim = cb => {
 
 module.exports.default = series(
     parallel(antes1, antes2),
-     copiar, fim
+    copiar, fim
     )
