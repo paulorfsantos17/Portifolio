@@ -6,7 +6,6 @@ export default class Cliente {
     constructor(nome: string, idade: number, id : string = null){
         this.nome = nome
         this.idade = idade
-
         this.id = id
     }
 
@@ -23,7 +22,7 @@ export default class Cliente {
     }
 
     get Idade(){
-        return this.id
+        return this.idade
     }
 
 }
