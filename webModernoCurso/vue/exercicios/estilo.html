@@ -12,9 +12,23 @@
     </style>
 </head>
 <body class="exercicio">
+    <div id="app" @click="vermelhoOuNone"
+        :class="{'vermelho': aplicarCor}">
+        Teste
+    </div>
 
     <script>
-        // ...
+        new Vue({
+            el:'#app',
+            data: {
+                aplicarCor: false
+            },
+            methods: {
+                vermelhoOuNone(){
+                    this.aplicarCor = !this.aplicarCor
+                }
+            }
+        })
     </script>
 </body>
 </html>
