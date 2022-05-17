@@ -1,8 +1,8 @@
 <template>
-    <display-vue id="app">
+    <div id="app">
         
         <ProjectCalculator />
-    </display-vue>
+    </div>
 </template>
 
 <script>
