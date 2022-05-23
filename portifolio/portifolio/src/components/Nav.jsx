@@ -1,6 +1,6 @@
 import React from "react";
 import './Nav.css'
-import Logo from "./Logo"
+
 
 const Nav = props => 
     <aside className="menu-area">

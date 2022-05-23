@@ -1,0 +1,15 @@
+.icons{
+    display: flex;
+    height: 100px;
+    width: 50vh;
+    justify-content: space-evenly;
+}
+.iconsformat{
+    color: #000;
+    height: 50px;
+    width: 50px;
+}
+
+.iconsformat:hover{
+    color: #204953;
+}

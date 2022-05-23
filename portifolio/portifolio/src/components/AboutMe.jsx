@@ -1,5 +1,6 @@
 import './AboutMe.css'
 import aboutmeimg from '../assets/img/image-sobremim.png'
+import Icons from './Icons'
 
 const AboutMe = props => 
     <aside className='aboutme'>
@@ -7,6 +8,7 @@ const AboutMe = props =>
             <h1>Olá, me chamo Paulo!</h1>
             <h2>Bem-vindo ao meu portifólio!</h2>
             <img src={aboutmeimg} alt="Imagem não encontrada!" className='aboutmeimg'/>
+            <Icons></Icons>
         </div>
         <div className='aboutme-text'>
             <h1>Sobre mim</h1>
