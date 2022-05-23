@@ -1,0 +1,9 @@
+footer {
+    display: flex;
+    align-items: flex-start;
+    background-color: #204953;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: #f7f5c4;
+    height: 100hv;
+}

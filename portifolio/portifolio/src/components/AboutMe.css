@@ -1,0 +1,56 @@
+.aboutme-imagem {
+    line-height: 5%;
+    height: 500px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    opacity: 75%;
+}
+.aboutme-text {
+    background-color: #F7F5C4;
+    height: 500px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+    opacity: 75%;
+}
+
+aside.aboutme{
+    display: flex;
+}
+
+.aboutme-imagem:hover {
+    animation-name: aumentar;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    width: 90%;
+    opacity: 100%;
+}
+
+.aboutme-text:hover {
+    animation-name: aumentar;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    width: 90%;
+    opacity: 100%;
+    
+}
+
+@keyframes aumentar {
+    0% {width: 50%;opacity:75%;}
+    100%{width: 90%;opacity:100%; }
+    
+}
+
+
+div.aboutme-imagem > img {
+    height: 85%;
+    width: 75%;
+}
+

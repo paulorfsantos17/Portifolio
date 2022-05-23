@@ -1,0 +1,15 @@
+
+.menu a {
+    display: inline;
+    padding: 10px;
+    margin: 0;
+    color: #f7f5c4;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #7CAFDF;
+}
+
+
