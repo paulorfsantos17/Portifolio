@@ -1,10 +1,14 @@
 import React  from "react";
+import Ability from "./Ability";
 import AboutMe from "./AboutMe";
 import  './Main'
+import Projects from './Projects'
 
 const Main = props => (
-    <main>
+    <main className="container">
         <AboutMe></AboutMe>
+        <Projects></Projects>
+        <Ability></Ability>
     </main>
 )
 

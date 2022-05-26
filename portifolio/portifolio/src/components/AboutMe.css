@@ -10,7 +10,7 @@
 }
 .aboutme-text {
     background-color: #F7F5C4;
-    height: 500px;
+    height: 88.3vh;
     width: 50%;
     display: flex;
     justify-content: flex-start;
@@ -23,6 +23,7 @@
 
 aside.aboutme{
     display: flex;
+    height: 46.5%;
 }
 
 .aboutme-imagem:hover {

@@ -1,0 +1,21 @@
+nav > a{
+    display: inline-block;
+    position: relative;
+}
+
+nav > a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #Fff;
+    transition: width 0.25s ease-out;
+
+}
+
+nav > a:hover::before{
+    width: 100%;
+
+}
