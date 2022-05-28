@@ -4,9 +4,12 @@ import './Ability.css'
 const Ability = props => {
     return (
         <div className='ability'>
-            <h1>
-                Habilidades
-            </h1>
+            <section>
+                <h2>Habilidades</h2>
+            </section>
+            <section>
+                <h2>Descrição</h2>
+            </section>
         </div>
     )
 }

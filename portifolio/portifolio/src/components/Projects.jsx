@@ -1,5 +1,6 @@
 import CardProjects from './CardProjects'
 import './Projects.css'
+import Button from '../utils/Buttons'
 
 const Projects = props => {
     return (
@@ -10,6 +11,8 @@ const Projects = props => {
                 <CardProjects></CardProjects>
                 <CardProjects></CardProjects>
             </div>
+            <Button>
+            </Button>
         </section>
     )
 }

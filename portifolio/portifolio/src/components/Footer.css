@@ -2,6 +2,7 @@ footer {
     display: flex;
     align-items: flex-start;
     background-color: #204953;
+    margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
     color: #f7f5c4;

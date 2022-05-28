@@ -1,7 +1,7 @@
 import React  from "react";
 import Ability from "./Ability";
 import AboutMe from "./AboutMe";
-import  './Main'
+import  './Main.css'
 import Projects from './Projects'
 
 const Main = props => (

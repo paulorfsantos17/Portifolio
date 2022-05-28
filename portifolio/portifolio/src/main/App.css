@@ -48,7 +48,7 @@ footer {
   grid-area: footer;
 }
 
-main {
+main.container {
   grid-area: main;
 }
 

@@ -10,12 +10,17 @@ nav > a::before {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #Fff;
-    transition: width 0.25s ease-out;
+    background-color: #FEEC1B;
+    transition: width 0.5s ease-out;
 
 }
 
 nav > a:hover::before{
     width: 100%;
+    background-color: #FEEC1B;
 
+}
+
+nav > a:hover{
+    color:#FEEC1B;
 }

@@ -1,12 +1,13 @@
 .projects {
     background-color: #204953;
-    height: 500px;
+    height: 700px;
     width: 100%;
     display: flex;
     justify-content: center;
     color:#FFF;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2%;
 }
 
 .container-cards {
@@ -19,5 +20,5 @@
 .projects > h1{
     font-size: 2.5em;
     margin-top: 0;
-    display: flex;
+    
 }
